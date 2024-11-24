@@ -1,46 +1,82 @@
-header {
-    padding-block: 32px;
+& header {
+    padding-block: 2rem;
 }
 
-header .container {
+& header .container {
     display: flex;
     justify-content: space-between;
 }
 
-#profile {
+& #profile {
     display: flex;
-    gap: 32px;
+    gap: 2rem;
 }
 
-#profile > div {
-    max-width: 384px;
+& #profile > div {
+    max-width: 24rem;
 }
 
-#profile img {
-    height: 176px;
-    width: 176px;
+& #profile img {
+    height: 11rem;
+    width: 11rem;
     object-fit: cover;
     border-radius: 50%;
 }
 
-#profile h1 {
+& #profile h1 {
     font: var(--text-lg);
     color: var(--text-color-primary);
-    margin-bottom: 8px;
+    margin-bottom: 0.5rem;
 }
 
-#profile p {
+& #profile p {
     font: var(--text-md);
 }
 
-#info {
+& #info {
     list-style: none;
     display: flex;
     flex-direction: column;
 }
 
-#info li {
+& #info li {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 0.5rem;
+}
+
+/* MOBILE */
+@media (60.625rem <= width <= 80rem) {
+    & header {
+        max-width: 60.625rem;
+        width: 100%;
+        margin: auto;
+    }
+}
+
+/* MOBILE II*/
+@media (width < 60.625rem) {
+    & header .container{
+        max-width: 40rem;
+        width: 100%;
+        margin: auto;
+        align-items: center;
+        flex-direction: column;
+
+        & #profile {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+    }
+
+    header #info {
+        max-width: 40rem;
+        width: 100%;
+        margin-block: 2rem;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
 }

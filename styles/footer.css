@@ -1,10 +1,33 @@
 footer {
     display: flex;
-    gap: 24px;
-    padding-block: 24px;
-    font: 14px/150% var(--font-family);
+    gap: 1.5rem;
+    padding-block: 1.5rem;
+    font: 0.875rem/150% var(--font-family);
 }
 
 footer span:nth-child(1) {
     margin-right: auto;
+}
+
+/* MOBILE */
+@media (60.625rem <= width <= 80rem) {
+    footer {
+        width: 60.625rem;
+        margin: auto;
+    }
+}
+
+/* MOBILE II*/
+@media (width < 60.625rem) {
+
+    footer span:nth-child(1) {
+        margin-right: 0;
+    }
+
+    footer {
+        max-width: 40rem;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
 }

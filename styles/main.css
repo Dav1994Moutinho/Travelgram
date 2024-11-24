@@ -1,12 +1,31 @@
 main {
     display: flex;
-    gap: 24px;
+    justify-content: center;
+    gap: 1.5rem;
     flex-wrap: wrap;
-    padding-block: 24px;
+    padding-block: 1.5rem;
 }
 
 main img {
-    height: 286px;
-    width: 286px;
+    height: 17.875rem;
+    width: 17.875rem;
+    border-radius: 3rem;
     object-fit: cover;
+}
+
+/* MOBILE */
+@media (60.625rem <= width <= 80rem) {
+    main {
+        max-width: 60.625rem;
+        width: 100%;
+        margin: auto;
+    }
+}
+
+/* MOBILE II*/
+@media (width < 60.625rem) {
+    main {
+        max-width: 40rem;
+        width: 100%;
+    }
 }
